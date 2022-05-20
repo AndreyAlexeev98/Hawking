@@ -1,0 +1,52 @@
+header.header 
+  .header__container 
+    img(src='../../assets/images/Logo.png').header__logo 
+    .header__menu.menu
+      button.menu__btn.menu__btn--hamburger-menu#menu-btn
+        .hamburger-menu
+          .hamburger-menu__line
+          .hamburger-menu__line
+          .hamburger-menu__line
+      ul.menu__list
+        li.menu__item
+          a(href='#') Каталог товаров
+        li.menu__item
+          a(href='#') Доставка и оплата
+        li.menu__item
+          a(href='#') Цены
+        li.menu__item
+          a(href='#') Контакты  
+    a(href='tel:+78125092198').phone-number.header__phone
+      .small +7 (812)
+      .strong 509 21 98
+    button.callback.header__callback Перезвоните мне
+    ul.socials.header__socials 
+      li.socials__item
+        a(href='https://vk.com' target='_blank').socials__link.socials__link--vk
+          svg.socials__icon
+            use(xlink:href="/assets/images/sprite.svg#vk")
+      li.socials__item
+        a(href='https://telegram.org/' target='_blank').socials__link.socials__link--telegram
+          svg.socials__icon
+            use(xlink:href="/assets/images/sprite.svg#telegram")
+      li.socials__item
+        a(href='https://instagram.com' target='_blank').socials__link.socials__link--inst
+          svg.socials__icon
+            use(xlink:href="/assets/images/sprite.svg#insta")
+      li.socials__item
+        a(href='https://www.whatsapp.com/' target='_blank').socials__link.socials__link--whatsapp
+          svg.socials__icon
+            use(xlink:href="/assets/images/sprite.svg#whatsApp")
+    ul.controlls 
+      button.controlls__btn.controlls__btn--search
+        svg.controlls__icon
+          use(xlink:href="/assets/images/sprite.svg#search")
+      button.controlls__btn.controlls__btn--heart
+        svg.controlls__icon
+          use(xlink:href="/assets/images/sprite.svg#heart")
+      button.controlls__btn.controlls__btn--cart.cart-total
+        svg.controlls__icon
+          use(xlink:href="/assets/images/sprite.svg#cart")
+        .cart-total__background
+          .cart-total__value 10
+
