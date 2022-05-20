@@ -123,9 +123,7 @@
     display: flex;
   }
   &__list {
-    &:not(last-child) {
-      margin-right: 28px;
-    }
+    column-count: 2;
   }
   &__item {
     display: flex;
