@@ -28,8 +28,18 @@ block content
             li.hero__item Работаем чисто, аккуратно, убираем за собой, не сквернословим
             li.hero__item Только русские квалифицированные специалисты
             li.hero__item Устанавливаем любые дымоходы всех производителей
-        .hero__content-right
-          img(src="../../assets/images/hero-img.png", alt="Дымоход")
+        .hero__content-right.image-decor
+          img(src="../../assets/images/image-dimihod.png", alt="Дымоход").image-decor__img
+          svg.image-decor__icon-bg
+            use(xlink:href="/assets/images/sprite.svg#Blob")
+          svg.image-decor__icon-dots
+            use(xlink:href="/assets/images/sprite.svg#decorative-dots")
+          svg.image-decor__icon-dots.image-decor__icon-dots--second
+            use(xlink:href="/assets/images/sprite.svg#decorative-dots")
+          svg.image-decor__icon-triangle
+            use(xlink:href="/assets/images/sprite.svg#decorative-triangle")
+          svg.image-decor__icon-triangle.image-decor__icon-triangle--second
+            use(xlink:href="/assets/images/sprite.svg#decorative-triangle")
     section.info 
       .info__wrap.before-decaration
         h3.info__title.title-h3 Процесс выполнения монтажа
@@ -85,7 +95,23 @@ block content
     section.feedback 
       .feedback__title необходима консультация?
       .feedback__subtitle оставьте заявку или свяжитесь с нами в социальных сетях
-      .feedback__socials.socials
+      ul.socials.feedback__socials
+        li.socials__item
+          a(href='https://vk.com' target='_blank').socials__link.socials__link--vk
+            svg.socials__icon
+              use(xlink:href="/assets/images/sprite.svg#vk")
+        li.socials__item
+          a(href='https://telegram.org/' target='_blank').socials__link.socials__link--telegram
+            svg.socials__icon
+              use(xlink:href="/assets/images/sprite.svg#telegram")
+        li.socials__item
+          a(href='https://instagram.com' target='_blank').socials__link.socials__link--inst
+            svg.socials__icon
+              use(xlink:href="/assets/images/sprite.svg#insta")
+        li.socials__item
+          a(href='https://www.whatsapp.com/' target='_blank').socials__link.socials__link--whatsapp
+            svg.socials__icon
+              use(xlink:href="/assets/images/sprite.svg#whatsApp")
       .feedback__form.form
         .form__title Для 
           span.em консультации 
@@ -101,23 +127,24 @@ block content
         p.content__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         .content__block.movie
           img(src="../../assets/images/moovie-background.png", alt="")
+          iframe(src="https://www.youtube.com/embed/3qkwqjljB8M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen).movie__elem
       .content__wrap.before-decaration
         h3.content__title.title-h3 Фото выполненных работ
         p.content__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         .content__block.grid 
           .grid__item
-            img(src="../../assets/images/work-1.png", alt="Дымоход в доме")
+            img(src="../../assets/images/work-1-min.png", alt="Дымоход в доме")
           .grid__item
-            img(src="../../assets/images/work-1.png", alt="Дымоход в доме")
+            img(src="../../assets/images/work-2-min.png", alt="Дымоход в доме")
           .grid__item
-            img(src="../../assets/images/work-1.png", alt="Дымоход в доме")
+            img(src="../../assets/images/work-3-min.png", alt="Дымоход в доме")
           .grid__item
-            img(src="../../assets/images/work-1.png", alt="Дымоход в доме")
+            img(src="../../assets/images/work-4-min.png", alt="Дымоход в доме")
           .grid__item
-            img(src="../../assets/images/work-1.png", alt="Дымоход в доме")
+            img(src="../../assets/images/work-5-min.png", alt="Дымоход в доме")
           .grid__item
-            img(src="../../assets/images/work-1.png", alt="Дымоход в доме")
+            img(src="../../assets/images/work-6-min.png", alt="Дымоход в доме")
           .grid__item
-            img(src="../../assets/images/work-1.png", alt="Дымоход в доме")
+            img(src="../../assets/images/work-7-min.png", alt="Дымоход в доме")
           .grid__item
-            img(src="../../assets/images/work-1.png", alt="Дымоход в доме")
+            img(src="../../assets/images/work-8-min.png", alt="Дымоход в доме")

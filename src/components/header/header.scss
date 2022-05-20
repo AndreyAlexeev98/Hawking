@@ -12,7 +12,7 @@
   &__logo {
     margin-right: 52px;
   }
-  &__nav {
+  &__menu {
     margin-right: 56px;
   }
   &__phone {
@@ -34,7 +34,7 @@
 
 // components
 
-.nav {
+.menu {
   color: #4C858B;
   display: flex;
   align-items: center;
@@ -42,16 +42,27 @@
     padding: 17px;
     border-radius: 50%;
     border: 1px solid #4C858B;
+    transition: all .3s;
+    will-change: border-color;
     margin-right: 31px;
+    &:hover {
+      border-color: #EA6628;
+      transition: all .3s;
+      .hamburger-menu__line {
+        background-color: #EA6628;
+        transition:  all .3s;
+      }
+    }
     .hamburger-menu {
       height: 22px;
       width: 22px;
       &__line {
         border-radius: 5px;
         background-color: #4C858B;
+        will-change: background-color;
       }
       &--active {
-        transition: top .3s;
+        transition: all .3s;
         .hamburger-menu__line:nth-child(3) {
           bottom: 3px;
         }
@@ -63,8 +74,15 @@
     text-transform: uppercase;
     font-weight: 700;
   }
-  &__item:not(:last-child) {
-    margin-right: 35px;
+  &__item {
+    will-change: color;
+    &:hover {
+      color: #EA6628;
+      transition: color .3s;
+    }
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
   }
 }
 
@@ -89,6 +107,13 @@
   line-height: 17px;
   border-bottom: 1px dashed #AE2236;
   padding-bottom: 5px;
+  white-space: nowrap;
+  will-change: color;
+  &:hover {
+    color: #F00;
+    border-bottom-color: inherit;
+    transition: color .3s, border-bottom-color .3s; 
+  }
 }
 
 .socials {
@@ -104,9 +129,13 @@
     &:nth-child(3) {
       margin-right: 18px;
     }
+    .socials__icon:hover {
+      fill: #EA6628;
+      transition: fill .3s;
+    }
   }
   &__link {
-    display: block;
+    display: flex;
     &--vk {
       width: 23px;
       height: 14px;
@@ -126,6 +155,8 @@
   }
   &__icon {
     fill: #4C858B;
+    transition: fill .3s;
+    will-change: fill;
   }
 }
 
