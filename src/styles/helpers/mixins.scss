@@ -1,9 +1,11 @@
+// 1920px;
 @mixin desktop-hd() {
-  @media screen and (max-width: $bp-desktop  ) {
+  @media screen and (max-width: $bp-desktop-hd  ) {
     @content;
   }
 }
 
+//1200px;
 @mixin desktop() {
   @media screen and (max-width: $bp-desktop  ) {
     @content;
@@ -16,6 +18,7 @@
   }
 }
 
+// 768px;
 @mixin tablets() {
   @media screen and (max-width: $bp-tablets) {
     @content;
@@ -28,6 +31,7 @@
   }
 }
 
+// 480px;
 @mixin phones() {
   @media screen and (max-width: $bp-phones) {
     @content;

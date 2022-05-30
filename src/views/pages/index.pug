@@ -1,4 +1,5 @@
 extends ../layouts/default
+include ../helpers/mixins.pug
 
 block variables
   - var title='Дымоходы для домов и дач';
@@ -7,10 +8,12 @@ block variables
 block content
   main.main.container
     .main__header
-      h1.title Монтаж дымоходов
+      h1.main-title Монтаж дымоходов
       .bread-crumbs
-        a(href="#").bread-crumbs__link.bread-crumbs__link--main Главная
-        a(href="#").bread-crumbs__link Монтаж дымоходов
+        a(href="#").bread-crumbs__link Главная
+        a(href="#").bread-crumbs__link Каталог
+        a(href="#").bread-crumbs__link Камины
+        a(href="#").bread-crumbs__link Камины облицовки
     section.hero
       p.hero__desc В 
         strong Дымоход.ру  
@@ -18,8 +21,8 @@ block content
       .hero__content
         .hero__content-left
           .hero__title 
-            h3.title-h3 Lorem ipsum dolor sit amet
-            h2.big Lorem ipsum 
+            h2.section-title Lorem ipsum dolor sit amet
+              span Lorem ipsum
           ul.hero__list 
             li.hero__item Доступные цены
             li.hero__item Собственное производсвто Дымоходов
@@ -41,76 +44,51 @@ block content
           svg.image-decor__icon-triangle.image-decor__icon-triangle--second
             use(xlink:href="/assets/images/sprite.svg#decorative-triangle")
     section.info 
-      .info__wrap.before-decaration
-        h3.info__title.title-h3 Процесс выполнения монтажа
+      .info__wrap
+        +section_title('Процесс выполнения монтажа', 'info__title')
         .info__list-groups 
           ol.info__list
             li.info__item 
-              span.number 1 
               span.text Рассчёт предварительной заявки
             li.info__item
-              span.number 2 
               span.text Замер объекта нашим инженером
             li.info__item
-              span.number 3 
               span.text Составление Коммерческого предложения по изделиям дымохода и окончательной сметы на  работы 
             li.info__item
-              span.number 4 
               span.text Изготовление Дымохода, покраска (если требуется)
             li.info__item
-              span.number 5 
               span.text Монтаж продукции, проверка и наладкапробный запуск системы и последующая эксплуатация
             li.info__item
-              span.number 6 
               span.text Гарантийное обслуживание по соответствующем сроку 
-      .info__wrap.before-decaration
-        h3.info__title.title-h3 Почему Дымоход.ру?
+      .info__wrap
+        +section_title('Почему Дымоход.ру?', 'info__title')
         p.info__desc В отличие от других производителей, мы ручаемся за качество продукции, т.к. все Дымоходы изготавливаются из качественной стали, проверенного теплоизолятора, по современной технологии плазменной сварки «встык» 
-          ul.cards
-            li.cards__item.card 
-              svg.card__icon
-                use(xlink:href="/assets/images/sprite.svg#warranty")
-              h4.card__title Большой гарантийный срок
-              .card__subtitle 
-                ul
-                  li Крепёж, стыковка элементов – 
-                    mark.em 10 лет
-                  li Сквозная коррозия труб – 
-                    mark.em 5 лет 
-                  li Гидроизоляция – 
-                    mark.em 3 года
-            li.cards__item.card 
-              svg.card__icon
-                use(xlink:href="/assets/images/sprite.svg#helper")
-              h4.card__title Помощь в покупке агрегата 
-              .card__subtitle 
-                p (печи, камина, котла), а также качественной установке на объекте с последующим гарантийным сервисом
-            li.cards__item.card 
-              svg.card__icon
-                use(xlink:href="/assets/images/sprite.svg#review")
-              h4.card__title Реальные отзывы клиентов
-              .card__subtitle 
-                p Убедитесь в добросовестности исполнения, прочитав Отзывы клиентов в специальном разделе.
+        ul.cards
+          li.cards__item.card 
+            img.card__icon(src="../../assets/images/warranty.svg", alt="Документ о гарантии")
+            h4.card__title Большой гарантийный срок
+            .card__subtitle 
+              ul
+                li Крепёж, стыковка элементов – 
+                  mark.em 10 лет
+                li Сквозная коррозия труб – 
+                  mark.em 5 лет 
+                li Гидроизоляция – 
+                  mark.em 3 года
+          li.cards__item.card 
+            img.card__icon(src="../../assets/images/helper.svg", alt="Помощь")
+            h4.card__title Помощь в покупке агрегата 
+            .card__subtitle 
+              p (печи, камина, котла), а также качественной установке на объекте с последующим гарантийным сервисом
+          li.cards__item.card 
+            img.card__icon(src="../../assets/images/review.svg", alt="Отзывы")
+            h4.card__title Реальные отзывы клиентов
+            .card__subtitle 
+              p Убедитесь в добросовестности исполнения, прочитав Отзывы клиентов в специальном разделе.
     section.feedback 
-      .feedback__title необходима консультация?
+      h4.feedback__title необходима консультация?
       .feedback__subtitle оставьте заявку или свяжитесь с нами в социальных сетях
-      ul.socials.feedback__socials
-        li.socials__item
-          a(href='https://vk.com' target='_blank').socials__link.socials__link--vk
-            svg.socials__icon
-              use(xlink:href="/assets/images/sprite.svg#vk")
-        li.socials__item
-          a(href='https://telegram.org/' target='_blank').socials__link.socials__link--telegram
-            svg.socials__icon
-              use(xlink:href="/assets/images/sprite.svg#telegram")
-        li.socials__item
-          a(href='https://instagram.com' target='_blank').socials__link.socials__link--inst
-            svg.socials__icon
-              use(xlink:href="/assets/images/sprite.svg#insta")
-        li.socials__item
-          a(href='https://www.whatsapp.com/' target='_blank').socials__link.socials__link--whatsapp
-            svg.socials__icon
-              use(xlink:href="/assets/images/sprite.svg#whatsApp")
+      +socials('feedback__socials')
       .feedback__form.form
         .form__title Для 
           mark.em консультации 
@@ -118,32 +96,17 @@ block content
         .form__subtitle С Вами свяжутся в ближайшее время
         .form__inputs 
           input(type="text" placeholder='Ваше имя' required).input
-          input(type="phone" placeholder='Ваш телефон' required).input
+          input(type="tel" placeholder='Ваш телефон' required).input
           input(type="submit" value='отправить').input.input-submit
     section.content
-      .content__wrap.before-decaration
-        h3.content__title.title-h3 Видео об установке
+      .content__wrap
+        +section_title('Видео об установке', 'content__title')
         p.content__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         .content__block.movie
-          img(src="../../assets/images/moovie-background.png", alt="")
-          iframe(src="https://www.youtube.com/embed/3qkwqjljB8M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen).movie__elem
-      .content__wrap.before-decaration
-        h3.content__title.title-h3 Фото выполненных работ
+          .movie__adaptive-movie
+            iframe.movie__elem(src="https://www.youtube.com/embed/3qkwqjljB8M" title="Установка дымохода"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+      .content__wrap
+        +section_title('Фото выполненных работ', 'content__title')
         p.content__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        .content__block.grid 
-          .grid__item
-            img(src="../../assets/images/work-1-min.png", alt="Дымоход в доме")
-          .grid__item
-            img(src="../../assets/images/work-2-min.png", alt="Дымоход в доме")
-          .grid__item
-            img(src="../../assets/images/work-3-min.png", alt="Дымоход в доме")
-          .grid__item
-            img(src="../../assets/images/work-4-min.png", alt="Дымоход в доме")
-          .grid__item
-            img(src="../../assets/images/work-5-min.png", alt="Дымоход в доме")
-          .grid__item
-            img(src="../../assets/images/work-6-min.png", alt="Дымоход в доме")
-          .grid__item
-            img(src="../../assets/images/work-7-min.png", alt="Дымоход в доме")
-          .grid__item
-            img(src="../../assets/images/work-8-min.png", alt="Дымоход в доме")
+        .content__block 
+          include ../../components/photo-work/photo-work.pug

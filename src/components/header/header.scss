@@ -1,5 +1,8 @@
 .header {
   margin-bottom: 56px;
+  @include phones {
+    margin-bottom: 41px;
+  }
   &__container {
     max-width: 1786px;
     display: flex;
@@ -8,22 +11,111 @@
     margin: 0 auto;
     width: 95%;
     padding-top: 26px;
+    @include desktop {
+      padding-bottom: 24px;
+      border-bottom: 1px solid #E5E5E5;
+    }
+    @include tablets {
+      padding-top: 29px;
+      padding-bottom: 21px;
+    }
+    @include phones {
+      padding-bottom: 15px;
+    }
+  }
+  &__logo-link {
+    margin-right: 52px;
+    display: inline-block;
+    @include tablets{
+      margin-right: 0;
+    }
   }
   &__logo {
-    margin-right: 52px;
+    width: 100px;
+    height: 97px;
+    @include tablets {
+      width: 64px;
+      height: 62px;
+    }
+    @include phones {
+      width: 48px;
+      height: 47px;
+    }
   }
   &__menu {
-    margin-right: 56px;
+    margin-right: 100px;
+    .menu__btn--hamburger-menu {
+      .hamburger-menu--active {
+        .hamburger-menu__line:nth-child(3) {
+          @include phones {
+            bottom: 1px;
+          }
+        }
+      }
+    }
   }
   &__phone {
-    margin-right: 70px;
+    margin-right: 87px;
   }
   &__callback {
-    margin-right: 61px;
+    margin-right: 70px;
     margin-bottom: -5px;
   }
   &__socials {
-    margin-right: 60px;
+    margin-right: 50px;
+  }
+  .menu__list, 
+  .header__phone,
+  .header__callback,
+  .header__socials {
+    @include desktop-hd {
+      display: none;
+    }
+  }
+  &__menu {
+    @include desktop-hd {
+      order: 1;
+      margin-right: 0;
+    }
+  }
+  &__controlls {
+    margin-left: auto;
+    margin-right: 16px;
+    .controlls__btn {
+      &--heart,
+      &--search {
+        @include phones {
+          display: none;
+        }
+      }
+      &:not(:last-child) {
+        @include tablets {
+          margin-right: 24px;
+        }
+      }
+    }
+  }
+  .controlls {
+    &__btn {
+      @include phones {
+        width: 44px;
+        height: 44px;
+      }
+    }
+    &__icon {
+      @include phones {
+        width: 18px;
+        height: 15px;
+      }
+    }
+  }
+  .cart-total {
+    &__background {
+      @include phones {
+        right: -5px;
+        top: -2px;
+      }
+    }
   }
 }
 
@@ -45,6 +137,21 @@
     transition: all .3s;
     will-change: border-color;
     margin-right: 31px;
+    @include desktop-hd {
+      margin-right: 0;
+    }
+    @include phones {
+      padding: 13px;
+    }
+    .hamburger-menu {
+      &--active {
+        .hamburger-menu__line:nth-child(3) {
+          @include phones {
+            bottom: 1px;
+          }
+        }
+      }
+    }
     &:hover {
       border-color: #EA6628;
       transition: all .3s;
@@ -56,6 +163,10 @@
     .hamburger-menu {
       height: 22px;
       width: 22px;
+      @include phones {
+        height: 18px;
+        width: 18px;
+      }
       &__line {
         border-radius: 5px;
         background-color: #4C858B;
@@ -183,10 +294,18 @@
     &--cart {
       fill: #000000;
     }
+    @include phones {
+      width: 44px;
+      height: 44px;
+    }
   }
   &__icon {
     width: 22px;
     height: 22px;
+    @include phones {
+      width: 18px;
+      height: 15px;
+    }
   }
 }
 
@@ -203,6 +322,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @include phones {
+      right: -5px;
+      top: -2px;
+    }
   }
   &__value {
     color: #fff;
