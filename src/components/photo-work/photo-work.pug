@@ -1,0 +1,7 @@
+include ./photo-work.data.pug
+
+ul.photo-work.popup-gallery
+  each photo in images
+    li.photo-work__item
+      a.photo-work__link(href=photo.url, rel="alternate") 
+        img.photo-work__img(src=photo.url, alt=photo.name)

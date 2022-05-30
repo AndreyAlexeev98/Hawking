@@ -36,20 +36,4 @@ footer.footer
           svg.contacts__icon
             use(xlink:href="/assets/images/sprite.svg#placemark")
           .contacts__item г. Санкт - Петербург, ул. Тамбасова д.7
-        ul.socials.footer__socials 
-          li.socials__item
-            a(href='https://vk.com' target='_blank').socials__link.socials__link--vk
-              svg.socials__icon
-                use(xlink:href="/assets/images/sprite.svg#vk")
-          li.socials__item
-            a(href='https://telegram.org/' target='_blank').socials__link.socials__link--telegram
-              svg.socials__icon
-                use(xlink:href="/assets/images/sprite.svg#telegram")
-          li.socials__item
-            a(href='https://instagram.com' target='_blank').socials__link.socials__link--inst
-              svg.socials__icon
-                use(xlink:href="/assets/images/sprite.svg#insta")
-          li.socials__item
-            a(href='https://www.whatsapp.com/' target='_blank').socials__link.socials__link--whatsapp
-              svg.socials__icon
-                use(xlink:href="/assets/images/sprite.svg#whatsApp")
+        +socials('footer__socials')

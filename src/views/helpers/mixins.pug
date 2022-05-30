@@ -1,0 +1,21 @@
+mixin section_title(name, secondClass)
+  h3(class='section-title ' + secondClass)= name
+
+mixin socials(secondClass)
+  ul(class='socials ' + secondClass)
+    li.socials__item
+      a(href='https://vk.com' target='_blank').socials__link.socials__link--vk
+        svg.socials__icon
+          use(xlink:href="/assets/images/sprite.svg#vk")
+    li.socials__item
+      a(href='https://telegram.org/' target='_blank').socials__link.socials__link--telegram
+        svg.socials__icon
+          use(xlink:href="/assets/images/sprite.svg#telegram")
+    li.socials__item
+      a(href='https://instagram.com' target='_blank').socials__link.socials__link--inst
+        svg.socials__icon
+          use(xlink:href="/assets/images/sprite.svg#insta")
+    li.socials__item
+      a(href='https://www.whatsapp.com/' target='_blank').socials__link.socials__link--whatsapp
+        svg.socials__icon
+          use(xlink:href="/assets/images/sprite.svg#whatsApp")
